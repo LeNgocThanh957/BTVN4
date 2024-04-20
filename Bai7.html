@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert("Ta có phương trình ax^2 + bx + c = 0")
+    let a = +prompt("Nhập vào a");
+    let b = +prompt("Nhập vào b");
+    let c = +prompt("Nhập vào c");
+
+    let delta = Math.pow(b, 2) - 4 * a * c;
+    if (delta < 0) {
+        alert("Phương trình vô nghiệm")
+    } else if (delta === 0) {
+        let x = -b / (2 * a);
+        alert("Phương trình có nghiệm kép x1 = x2 = " + x);
+    } else {
+        let x1 = (-b + Math.pow(delta, 1 / 2)) / (2 * a);
+        let x2 = (-b - Math.pow(delta, 1 / 2)) / (2 * a);
+        alert("Phương trình có hai nghiệm x1 = " + x1 + " và x2 = " + x2)
+    }
+
+</script>
+
+</body>
+</html>

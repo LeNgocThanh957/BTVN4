@@ -6,15 +6,19 @@
 </head>
 <body>
 <script>
+    alert("Ta có phương trình ax + b = 0")
     let a = +prompt("Nhập vào a");
     let b = +prompt("Nhập vào b");
-    while (true) {
-        if (a === 0 && b === 0) {
-            a = +prompt("Không nhập vào giá trị là 0. Vui long nhập lại a: ");
-            b = +prompt("Không nhập vào giá trị là 0. Vui long nhập lại b: ");
-        } else break;
+
+    if (a === 0) {
+        if (b === 0) {
+            alert("Phương trình vô số nghiệm")
+        } else {
+            alert("Phương trình vô số nghiệm")
+        }
+    } else {
+        alert("Phương trình có nghiệm là X = " + (-b / a))
     }
-    alert("Phương trình có nghiệm là X = " + (-b / a))
 </script>
 </body>
 </html>
