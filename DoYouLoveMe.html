@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .button-container {
+            position: relative;
+        }
+        .moveable-button {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            padding: 10px 20px;
+            margin: 10px 100px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="button-container" style="width:965px; height: 700px; position: relative;">
+    <h1>Do You Love Me</h1>
+    <button style=" padding: 10px 20px; background-color: #007bff; color: #fff;" onclick="getData()">YES</button>
+    <button id="myButton" class="moveable-button" onclick="getData2()" >NO</button>
+</div>
+<script>
+    function getData() {
+        alert("<3");
+    }
+
+    function getData2() {
+        var button = document.getElementById('myButton');
+        var container = document.querySelector('.button-container');
+
+        // Generate random position
+        var maxX = container.offsetWidth - button.offsetWidth;
+        var maxY = container.offsetHeight - button.offsetHeight;
+        var newX = Math.floor(Math.random() * maxX);
+        var newY = Math.floor(Math.random() * maxY);
+
+        // Move the button
+        button.style.left = newX + 'px';
+        button.style.top = newY + 'px';
+
+        // Disable the button
+        button.disabled = true;
+    }
+</script>
+</body>
+</html>

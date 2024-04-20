@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra có phải là cạnh của tam giác không</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập vào a:");
+    let b = +prompt("Nhập vào b:");
+    let c = +prompt("Nhập vào c:");
+    while (true) {
+        if (a, b, c > 0 && a + b > c && b + c > a && a + c > b) {
+            alert("Đây là ba cạnh của tam giác ");
+            break;
+        } else {
+            alert("Đây chưa phải là ba cạnh của một tam giác")
+            a = +prompt("Vui lòng nhập lại a:");
+            b = +prompt("Vui lòng nhập lại b:");
+            c = +prompt("Vui lòng nhập lại c:");
+        }
+    }
+</script>
+</body>
+</html>
